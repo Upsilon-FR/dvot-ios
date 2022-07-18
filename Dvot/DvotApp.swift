@@ -12,6 +12,7 @@ struct DvotApp: App {
     
     init() {
             UITableView.appearance().backgroundColor = .white
+            UITextView.appearance().backgroundColor = .clear
         }
     
     var body: some Scene {

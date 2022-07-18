@@ -71,6 +71,12 @@ struct ProfilePageContent: View {
                 } content: {
                     ToastView(toastMessage)
                 }
+                PushView(destination: AdminRequestsView()) {
+                    Text("Mes Demandes")
+                        .foregroundColor(Color("primary"))
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
             }
             .padding(.vertical, 100)
         }

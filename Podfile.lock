@@ -7,12 +7,14 @@ PODS:
   - PKHUD (5.3.0)
   - SwiftAlgorithms (1.0.0)
   - ToastUI (2.0.0)
+  - youtube-ios-player-helper (1.0.4)
 
 DEPENDENCIES:
   - Charts
   - NavigationStack (~> 1.0.2)
   - PKHUD
   - ToastUI
+  - youtube-ios-player-helper
 
 SPEC REPOS:
   trunk:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - PKHUD
     - SwiftAlgorithms
     - ToastUI
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   Charts: d959d6723c8eedfdd0735dfc28cb0a71762ac4d9
@@ -28,7 +31,8 @@ SPEC CHECKSUMS:
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   ToastUI: 391eb9a1cc15e7ef4b79ee112e4a0b969259154f
+  youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: d1ff6c1f9f068d85f58b38f2a935caa840603a4f
+PODFILE CHECKSUM: 5172248c5d085d346654f0275fb5adff805b475e
 
 COCOAPODS: 1.10.1

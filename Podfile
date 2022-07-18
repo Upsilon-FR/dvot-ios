@@ -12,5 +12,6 @@ target 'Dvot' do
 	pod 'PKHUD'
 	pod 'NavigationStack', '~> 1.0.2'
   pod 'Charts'
+  pod 'youtube-ios-player-helper'
 
 end

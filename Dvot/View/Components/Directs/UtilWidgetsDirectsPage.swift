@@ -1,23 +1,18 @@
 //
-//  UtilWidgetsHomePage.swift
+//  UtilWidgetsDirectsPage.swift
 //  Dvot
 //
-//  Created by Eduard Serban on 15/07/2022.
+//  Created by Eduard Serban on 18/07/2022.
 //
 
 import SwiftUI
 import NavigationStack
 
-struct UtilWidgetsHomePage: View {
-    
-    @State private var showingModal = false
-    
+struct UtilWidgetsDirectsPage: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 50) {
-            VoteInfo()
-            Button {
-                showingModal.toggle()
-            } label: {
+            DirectInfo()
+            PushView(destination: ProfilePageView()) {
                 HStack{
                     Image(systemName: "doc.fill")
                         .font(.body)
@@ -25,7 +20,7 @@ struct UtilWidgetsHomePage: View {
                         .padding()
                         .background(Color.white)
                         .cornerRadius(10)
-                    Text("Déposer un nouveau projet")
+                    Text("Faire une demande de direct")
                         .font(.body)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -36,17 +31,14 @@ struct UtilWidgetsHomePage: View {
                 .cornerRadius(10)
                 
             }
-            .sheet(isPresented: $showingModal) {
-                SendRequestModalView(title: "Déposer un nouveau projet")
-            }
             Spacer()
         }
         .padding()
     }
 }
 
-struct UtilWidgetsHomePage_Previews: PreviewProvider {
+struct UtilWidgetsDirectsPage_Previews: PreviewProvider {
     static var previews: some View {
-        UtilWidgetsHomePage()
+        UtilWidgetsDirectsPage()
     }
 }

@@ -12,6 +12,9 @@ struct DetailSideWidgets: View {
     
     @State private var votesFor: Int = 0
     @State private var votesAgainst: Int = 0
+    
+    let timer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 50) {
             VoteInfo()
@@ -42,7 +45,7 @@ struct DetailSideWidgets: View {
                 votesFor = votes.votesFor
                 votesAgainst = votes.votesAgainst
             }
-            .onTapGesture {
+            .onReceive(timer) { _ in
                 let votes = VotesProvider.getEntriesForVotes(from: post)
                 votesFor = votes.votesFor
                 votesAgainst = votes.votesAgainst

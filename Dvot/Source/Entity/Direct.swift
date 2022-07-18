@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Direct: CustomStringConvertible {
+class Direct: CustomStringConvertible, Identifiable {
     var description: String {
         "Direct"
     }

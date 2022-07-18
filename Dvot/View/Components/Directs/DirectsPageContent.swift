@@ -10,12 +10,23 @@ import SwiftUI
 struct DirectsPageContent: View {
     var body: some View {
         ZStack{
-            Color(.green)
+            Color(.white)
                 .ignoresSafeArea()
-            Text("Directs")
-                .foregroundColor(.white)
-                .fontWeight(.bold)
-                .font(.title)
+            VStack{
+                Text("Directs")
+                    .font(.title)
+                    .foregroundColor(.black)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
+                HStack {
+                    DirectsListDirectsPageView()
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
+                    Spacer()
+                    UtilWidgetsDirectsPage()
+                        .frame(maxWidth: 250, alignment: .topLeading)
+                }
+            }
+            .padding(20)
         }
     }
 }

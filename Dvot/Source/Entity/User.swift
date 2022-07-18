@@ -12,6 +12,7 @@ class User: CustomStringConvertible {
         "User"
     }
     
+    let id: String?
     let lastName: String
     let firstName: String
     let mail: String
@@ -20,7 +21,8 @@ class User: CustomStringConvertible {
     let gender: String
     let role: String
     
-    init(lastName: String, firstName: String, mail: String, birthDate: String, birthPlace: String, gender: String, role: String){
+    init(id: String?, lastName: String, firstName: String, mail: String, birthDate: String, birthPlace: String, gender: String, role: String){
+        self.id = id
         self.lastName = lastName
         self.firstName = firstName
         self.mail = mail
@@ -40,7 +42,8 @@ class User: CustomStringConvertible {
               let role = dict["role"] as? String else {
                   return nil
               }
+        let id = dict["id"] as? String
         
-        return User(lastName: lastName, firstName: fistName, mail: mail, birthDate: birthDate, birthPlace: birthPlace, gender: gender, role: role)
+        return User(id: id, lastName: lastName, firstName: fistName, mail: mail, birthDate: birthDate, birthPlace: birthPlace, gender: gender, role: role)
     }
 }
