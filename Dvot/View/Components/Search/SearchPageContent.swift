@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SavesPageContent: View {
+struct SearchPageContent: View {
     var body: some View {
         ZStack{
             Color(.yellow)
@@ -17,11 +17,5 @@ struct SavesPageContent: View {
                 .fontWeight(.bold)
                 .font(.title)
         }
-    }
-}
-
-struct SavesPageContent_Previews: PreviewProvider {
-    static var previews: some View {
-        SavesPageContent()
     }
 }

@@ -14,7 +14,7 @@ struct SearchPageView: View {
                 .padding()
                 .frame(width: 250)
                 .overlay(Divider(), alignment: .trailing)
-            SavesPageContent()
+            SearchPageContent()
         }
     }
 }

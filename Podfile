@@ -11,6 +11,6 @@ target 'Dvot' do
 	pod 'ToastUI'
 	pod 'PKHUD'
 	pod 'NavigationStack', '~> 1.0.2'
-  pod "SwiftUIRefresh"
+  pod 'Charts'
 
 end

@@ -27,7 +27,7 @@ struct PostDetailView: View {
                         PostDetailContent(post: post)
                             .frame(maxWidth: .infinity, alignment: .topLeading)
                         Spacer()
-                        UtilWidgetsHomePage()
+                        DetailSideWidgets(post: post)
                             .frame(maxWidth: 250, alignment: .topLeading)
                     }
                 }
