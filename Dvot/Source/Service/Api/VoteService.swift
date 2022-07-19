@@ -11,7 +11,7 @@ class VoteService {
     static let VOTE_BASE = ApiServices.API_URL + "/ios/vote"
     
     class func get(with post: String, completion: @escaping (ApiResponse) -> Void) {
-        guard let url = URL(string: UserService.USER_BASE + "/\(post)") else {
+        guard let url = URL(string: VOTE_BASE + "/\(post)") else {
             completion(ApiServices.API_DEFAULT_RESPONSE)
             return
         }

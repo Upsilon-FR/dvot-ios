@@ -14,20 +14,7 @@ struct VotesProvider {
     
     static func getEntriesForVotes(from post: Post) -> VotesProvider {
         var vote: VotesProvider = VotesProvider(votesFor: 0, votesAgainst: 0)
-        VoteService.get(with: post.id ?? "") { response in
-            if response.error {
-                return
-            }
-            guard let data = response.data as? [[String: Any]] else {
-                return
-            }
-            let votes = data[0]
-            guard let votesFor = votes["votesFor"] as? Int,
-                  let votesAgainst = votes["votesAgainst"] as? Int else {
-                      return
-                  }
-            vote =  VotesProvider(votesFor: votesFor, votesAgainst: votesAgainst)
-        }
+        
         return vote
     }
     

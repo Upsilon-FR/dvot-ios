@@ -41,14 +41,42 @@ struct DetailSideWidgets: View {
             .background(Color("primary"))
             .cornerRadius(10)
             .onAppear {
-                let votes = VotesProvider.getEntriesForVotes(from: post)
-                votesFor = votes.votesFor
-                votesAgainst = votes.votesAgainst
+                VoteService.get(with: post.id ?? "") { response in
+                    if response.error {
+                        return
+                    }
+                    guard let data = response.data as? [[String: Any]] else {
+                        return
+                    }
+                    let votes = data[0]
+                    guard let votesFor = votes["votesFor"] as? Int,
+                          let votesAgainst = votes["votesAgainst"] as? Int else {
+                              return
+                          }
+                    DispatchQueue.main.async {
+                        self.votesFor = votesFor
+                        self.votesAgainst = votesAgainst
+                    }
+                }
             }
             .onReceive(timer) { _ in
-                let votes = VotesProvider.getEntriesForVotes(from: post)
-                votesFor = votes.votesFor
-                votesAgainst = votes.votesAgainst
+                VoteService.get(with: post.id ?? "") { response in
+                    if response.error {
+                        return
+                    }
+                    guard let data = response.data as? [[String: Any]] else {
+                        return
+                    }
+                    let votes = data[0]
+                    guard let votesFor = votes["votesFor"] as? Int,
+                          let votesAgainst = votes["votesAgainst"] as? Int else {
+                              return
+                          }
+                    DispatchQueue.main.async {
+                        self.votesFor = votesFor
+                        self.votesAgainst = votesAgainst
+                    }
+                }
             }
             
             Spacer()
