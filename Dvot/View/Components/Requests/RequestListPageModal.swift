@@ -54,7 +54,7 @@ struct RequestListPageModal: View {
                     .background(Color("primary"))
                     .cornerRadius(10)
                     .shadow(color: Color("softWhite"), radius: 5, x: 0, y: 2)
-                    .padding(.vertical, 30)
+                    .padding(.vertical, 5)
                     .onAppear {
                         if index == sourceOfRequests.requests.count - 1 {
                             sourceOfRequests.getRequests(at: nextIndex)
@@ -63,7 +63,7 @@ struct RequestListPageModal: View {
                     }
                 }
                 .listStyle(.automatic)
-                .padding(.horizontal, 20)
+                .padding(20)
             }
         }
     }

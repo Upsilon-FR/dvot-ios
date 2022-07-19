@@ -15,7 +15,9 @@ struct UtilWidgetsDirectsPage: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 50) {
             DirectInfo()
-            PushView(destination: ProfilePageView()) {
+            Button {
+                showingModal.toggle()
+            } label: {
                 HStack{
                     Image(systemName: "doc.fill")
                         .font(.body)
@@ -32,10 +34,9 @@ struct UtilWidgetsDirectsPage: View {
                 .padding(15)
                 .background(Color("primary"))
                 .cornerRadius(10)
-                
             }
             .sheet(isPresented: $showingModal) {
-                SendRequestModalView(title: "Faire une demande de direct")
+                SendRequestModalView(title: "Faire une demande de direct", showingModal: $showingModal)
             }
             Spacer()
         }

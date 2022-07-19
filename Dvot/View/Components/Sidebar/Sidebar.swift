@@ -15,7 +15,6 @@ struct Sidebar: View {
                 .font(.system(size: 16))
             VStack(alignment: .leading, spacing: 40) {
                 SidebarElement(icon: Image(systemName: "house.fill"), label: "Lois", isSelected: "Lois" == page, target: HomePageView())
-                SidebarElement(icon: Image(systemName: "magnifyingglass"), label: "Recherche",isSelected: "Recherche" == page,  target: SearchPageView())
                 SidebarElement(icon: Image(systemName: "livephoto"), label: "Directs",isSelected: "Directs" == page,  target: DirectsPageView())
                 SidebarElement(icon: Image(systemName: "person.2"), label: "Profil", isSelected: "Profil" == page, target: ProfilePageView())
                 Spacer()

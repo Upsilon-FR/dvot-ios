@@ -37,7 +37,7 @@ struct UtilWidgetsHomePage: View {
                 
             }
             .sheet(isPresented: $showingModal) {
-                SendRequestModalView(title: "Déposer un nouveau projet")
+                SendRequestModalView(title: "Déposer un nouveau projet", showingModal: $showingModal)
             }
             Spacer()
         }

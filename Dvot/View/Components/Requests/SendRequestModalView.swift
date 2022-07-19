@@ -17,6 +17,8 @@ struct SendRequestModalView: View {
     @State private var presentingToast: Bool = false
     @State private var toastMessage: String = ""
     
+    @Binding var showingModal: Bool
+    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -59,9 +61,9 @@ struct SendRequestModalView: View {
                                     return
                                 }
                                 DispatchQueue.main.async {
-                                    presentationMode.wrappedValue.dismiss()
                                     presentingToast.toggle()
                                     toastMessage = "Envoyé"
+                                    showingModal = false
                                 }                                
                             }
                         } else {
