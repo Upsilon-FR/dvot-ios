@@ -50,7 +50,7 @@ struct SendRequestModalView: View {
                             let dateFormatter = DateFormatter()
                             dateFormatter.dateFormat = "dd/MM/yyyy"
                             
-                            let request: AdminRequest = AdminRequest(id: nil, type: type, description: description, date: dateFormatter.string(from: Date.now), userId: ApiServices.USER!.id!, status: false, accepted: nil, treatedBy: nil, teatedDate: nil)
+                            let request: PersonalRequest = PersonalRequest(id: nil, type: type, description: description, date: dateFormatter.string(from: Date.now), userId: ApiServices.USER!.id!, status: false, accepted: nil, treatedBy: nil, teatedDate: nil)
                             
                             RequestService.send(adminRequest: request) { response in
                                 if response.error {

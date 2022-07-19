@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		06A49D8DBB4B44A913DF75DD /* Pods_Dvot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF22009120CC7E268A40B7B9 /* Pods_Dvot.framework */; };
+		610A10DD2886A60200A9E404 /* RequestListPageModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610A10DC2886A60200A9E404 /* RequestListPageModal.swift */; };
+		610A10DF2886A6D200A9E404 /* SourceOfRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610A10DE2886A6D200A9E404 /* SourceOfRequests.swift */; };
 		611543BF2884287E00DA4E7C /* PostListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611543BE2884287E00DA4E7C /* PostListElement.swift */; };
 		611543C1288442F900DA4E7C /* SourceOfPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611543C0288442F900DA4E7C /* SourceOfPosts.swift */; };
 		611543C32884460D00DA4E7C /* PostsListHomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611543C22884460D00DA4E7C /* PostsListHomePageView.swift */; };
@@ -49,7 +51,7 @@
 		617E0680287EF2A1000F0B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617E067F287EF2A1000F0B4D /* Assets.xcassets */; };
 		617E0683287EF2A1000F0B4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617E0682287EF2A1000F0B4D /* Preview Assets.xcassets */; };
 		61D6CA9E28861582002B1BD6 /* AdminRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D6CA9D28861582002B1BD6 /* AdminRequestsView.swift */; };
-		61D6CAA02886159B002B1BD6 /* AdminRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D6CA9F2886159B002B1BD6 /* AdminRequest.swift */; };
+		61D6CAA02886159B002B1BD6 /* PersonalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D6CA9F2886159B002B1BD6 /* PersonalRequest.swift */; };
 		61D6CAA728861C77002B1BD6 /* SendRequestModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D6CAA628861C77002B1BD6 /* SendRequestModalView.swift */; };
 		61DA415A28849C4700FFEABF /* VoteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA415928849C4700FFEABF /* VoteInfo.swift */; };
 		61DA415E28849CBC00FFEABF /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DA415D28849CBC00FFEABF /* PostDetailView.swift */; };
@@ -63,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		06E3057C1C793000ECB5BBA7 /* Pods-Dvot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dvot.debug.xcconfig"; path = "Target Support Files/Pods-Dvot/Pods-Dvot.debug.xcconfig"; sourceTree = "<group>"; };
+		610A10DC2886A60200A9E404 /* RequestListPageModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestListPageModal.swift; sourceTree = "<group>"; };
+		610A10DE2886A6D200A9E404 /* SourceOfRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceOfRequests.swift; sourceTree = "<group>"; };
 		611543BE2884287E00DA4E7C /* PostListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListElement.swift; sourceTree = "<group>"; };
 		611543C0288442F900DA4E7C /* SourceOfPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceOfPosts.swift; sourceTree = "<group>"; };
 		611543C22884460D00DA4E7C /* PostsListHomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListHomePageView.swift; sourceTree = "<group>"; };
@@ -105,7 +109,7 @@
 		617E067F287EF2A1000F0B4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		617E0682287EF2A1000F0B4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		61D6CA9D28861582002B1BD6 /* AdminRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRequestsView.swift; sourceTree = "<group>"; };
-		61D6CA9F2886159B002B1BD6 /* AdminRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRequest.swift; sourceTree = "<group>"; };
+		61D6CA9F2886159B002B1BD6 /* PersonalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalRequest.swift; sourceTree = "<group>"; };
 		61D6CAA628861C77002B1BD6 /* SendRequestModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendRequestModalView.swift; sourceTree = "<group>"; };
 		61DA415928849C4700FFEABF /* VoteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteInfo.swift; sourceTree = "<group>"; };
 		61DA415D28849CBC00FFEABF /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
@@ -241,7 +245,7 @@
 				612E598D287F08BE00D9A39F /* User.swift */,
 				612E598F287F1DBB00D9A39F /* Post.swift */,
 				612E5991287F1F7500D9A39F /* Direct.swift */,
-				61D6CA9F2886159B002B1BD6 /* AdminRequest.swift */,
+				61D6CA9F2886159B002B1BD6 /* PersonalRequest.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -265,6 +269,7 @@
 				612E5999287F22EC00D9A39F /* GlobalState.swift */,
 				611543C0288442F900DA4E7C /* SourceOfPosts.swift */,
 				6146F00D288545A1009A7F6E /* SourceOfDirects.swift */,
+				610A10DE2886A6D200A9E404 /* SourceOfRequests.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				61D6CAA628861C77002B1BD6 /* SendRequestModalView.swift */,
+				610A10DC2886A60200A9E404 /* RequestListPageModal.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -491,13 +497,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				611543BF2884287E00DA4E7C /* PostListElement.swift in Sources */,
-				61D6CAA02886159B002B1BD6 /* AdminRequest.swift in Sources */,
+				61D6CAA02886159B002B1BD6 /* PersonalRequest.swift in Sources */,
 				612C0DAF2885A09200A32CC7 /* RequestService.swift in Sources */,
 				612E5985287F048800D9A39F /* LoginView.swift in Sources */,
 				6116961D288099BF00FF9F87 /* DirectsPageContent.swift in Sources */,
 				611696192880996600FF9F87 /* SearchPageView.swift in Sources */,
 				6116960D28806D8600FF9F87 /* SidebarElement.swift in Sources */,
 				61169610288074E600FF9F87 /* HomePageContent.swift in Sources */,
+				610A10DD2886A60200A9E404 /* RequestListPageModal.swift in Sources */,
 				613563052885622A003D3C52 /* VideoView.swift in Sources */,
 				61DA416028849E2B00FFEABF /* PostDetailContent.swift in Sources */,
 				611543C1288442F900DA4E7C /* SourceOfPosts.swift in Sources */,
@@ -534,6 +541,7 @@
 				613562FD28855464003D3C52 /* DirectsListElement.swift in Sources */,
 				613562FB28855331003D3C52 /* DiretsListElementMinimalist.swift in Sources */,
 				6116960B28806C0200FF9F87 /* Sidebar.swift in Sources */,
+				610A10DF2886A6D200A9E404 /* SourceOfRequests.swift in Sources */,
 				61D6CAA728861C77002B1BD6 /* SendRequestModalView.swift in Sources */,
 				61169607288066C900FF9F87 /* SplashScreenView.swift in Sources */,
 				61DA41752884D5D700FFEABF /* DetailSideWidgets.swift in Sources */,

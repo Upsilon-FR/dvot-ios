@@ -10,8 +10,8 @@ import SwiftUI
 class RequestService {
     static let BASE = ApiServices.API_URL + "/ios/demande"
  
-    class func list(completion: @escaping (ApiResponse) -> Void) {
-        guard let url = URL(string: self.BASE + "/list/\(ApiServices.USER?.id ?? "")/3") else {
+    class func list(at offset: Int, completion: @escaping (ApiResponse) -> Void) {
+        guard let url = URL(string: self.BASE + "/list/\(ApiServices.USER?.id ?? "")/15/\(offset)") else {
             completion(ApiServices.API_DEFAULT_RESPONSE)
             return
         }
@@ -46,7 +46,7 @@ class RequestService {
         task.resume()
     }
     
-    class func send(adminRequest: AdminRequest, completion: @escaping (ApiResponse) -> Void) {
+    class func send(adminRequest: PersonalRequest, completion: @escaping (ApiResponse) -> Void) {
         guard let url = URL(string: self.BASE + "/send") else {
             completion(ApiServices.API_DEFAULT_RESPONSE)
             return

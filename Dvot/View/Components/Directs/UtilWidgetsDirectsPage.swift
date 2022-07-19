@@ -9,6 +9,9 @@ import SwiftUI
 import NavigationStack
 
 struct UtilWidgetsDirectsPage: View {
+    
+    @State private var showingModal = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 50) {
             DirectInfo()
@@ -30,6 +33,9 @@ struct UtilWidgetsDirectsPage: View {
                 .background(Color("primary"))
                 .cornerRadius(10)
                 
+            }
+            .sheet(isPresented: $showingModal) {
+                SendRequestModalView(title: "Faire une demande de direct")
             }
             Spacer()
         }

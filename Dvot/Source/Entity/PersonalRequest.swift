@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class AdminRequest: Identifiable {
+class PersonalRequest: Identifiable {
     let id: String?
     let type: String
     let description: String
@@ -30,17 +30,7 @@ class AdminRequest: Identifiable {
         self.teatedDate = teatedDate
     }
     
-    
-    public func toDict() -> [String: Any] {
-        var dict: [String: Any] = [:]
-        dict["type"] = self.type
-        dict["date"] = self.date
-        dict["description"] = self.description
-        dict["utilisateurId"] = ApiServices.USER!.id!
-        return dict
-    }
-    
-    public class func fromDict(dict: [String: Any]) -> AdminRequest? {
+    public class func fromDict(_ dict: [String: Any]) -> PersonalRequest? {
         guard let type = dict["type"] as? String,
               let description = dict["description"] as? String,
               let date = dict["date"] as? String,
@@ -55,6 +45,15 @@ class AdminRequest: Identifiable {
         let treatedBy = dict["traite_par"] as? String
         let tratedDate = dict["date_traitement"] as? String
         
-        return AdminRequest(id: id, type: type, description: description, date: date, userId: userId, status: status, accepted: accepted, treatedBy: treatedBy, teatedDate: tratedDate)
+        return PersonalRequest(id: id, type: type, description: description, date: date, userId: userId, status: status, accepted: accepted, treatedBy: treatedBy, teatedDate: tratedDate)
+    }
+    
+    public func toDict() -> [String: Any] {
+        var dict: [String: Any] = [:]
+        dict["type"] = self.type
+        dict["date"] = self.date
+        dict["description"] = self.description
+        dict["utilisateurId"] = ApiServices.USER!.id!
+        return dict
     }
 }

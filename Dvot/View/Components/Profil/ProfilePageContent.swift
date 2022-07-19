@@ -14,6 +14,8 @@ struct ProfilePageContent: View {
     @State private var presentingToast: Bool = false
     @State private var toastMessage: String = ""
     
+    @State private var showRequestListModel: Bool = false
+    
     @EnvironmentObject private var navigationStack: NavigationStack
     
     var body: some View {
@@ -45,6 +47,17 @@ struct ProfilePageContent: View {
                     .foregroundColor(.secondary)
                 Spacer()
                 Button {
+                    showRequestListModel.toggle()
+                } label: {
+                    Text("Mes Demandes")
+                        .foregroundColor(Color("primary"))
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
+                .sheet(isPresented: $showRequestListModel) {
+                    RequestListPageModal()
+                }
+                Button {
                     AuthService.logout { response in
                         if response.error {
                             presentingToast = true
@@ -70,12 +83,6 @@ struct ProfilePageContent: View {
                   print("Toast dismissed")
                 } content: {
                     ToastView(toastMessage)
-                }
-                PushView(destination: AdminRequestsView()) {
-                    Text("Mes Demandes")
-                        .foregroundColor(Color("primary"))
-                        .font(.title)
-                        .fontWeight(.bold)
                 }
             }
             .padding(.vertical, 100)
